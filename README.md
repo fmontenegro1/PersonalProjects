@@ -1,2 +1,2 @@
 # PersonalProjects
-This is a chanel I created to share my BI projects to community
+This is a channel I've created to share my BI projects to community
