@@ -1,4 +1,5 @@
-# Cómo crear una conexión de SSAS con R o Python?
+# Cómo crear una conexión de SSAS con R o Python? 
+
 
 Para los desarrolladores de BI resulta bastante sencillo ejecutar Scripts de R o Python desde Power BI pero, es posible conectar Power BI con un SSAS y que ese último a su vez, pueda estar conectado con un entorno de trabajo de R o Python? 
 
