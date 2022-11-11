@@ -16,8 +16,7 @@ Aclaración: *Estas últimas tareas no serían especificamente de Data Analysis,
 <br />
 Buscamos nuestro recurso de Databricks desde azure:
 
-<img src="captura1.PNG" width="800" /> ![](images/k8s-dashboard.png)
-
+![Foto modelo](captura1.png)
 
 
 Una vez que se encuentra el recurso, se hace clic en "Launch worskpace" para ingresar en el espacio de trabajo de Databricks.
