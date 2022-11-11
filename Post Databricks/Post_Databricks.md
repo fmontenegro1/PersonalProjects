@@ -16,17 +16,17 @@ Aclaración: *Estas últimas tareas no serían especificamente de Data Analysis,
 <br />
 Buscamos nuestro recurso de Databricks desde azure:
 
-![Foto modelo](captura1.PNG)
+![captura1](captura1.PNG)
 
 Una vez que se encuentra el recurso, se hace clic en "Launch worskpace" para ingresar en el espacio de trabajo de Databricks.
-![Foto modelo](captura2.PNG)
+![captura2](captura2.PNG)
 
 Ya nos encontramos en el workspace de Databricks.
-![Foto modelo](captura3.PNG)
+![captura3](captura3.PNG)
 
 Lo siguiente será crear un nuevo Notebook.
 
-![Foto modelo](captura4.PNG)
+![captura4](captura4.PNG)
 
 Se escribe un nombre, se selecciona un lenguaje por defecto (Luego veremos que puede cambiarse entre los commands) y no menos importante, seleccionar el cluster que ejecutará nuestro notebook.
 
