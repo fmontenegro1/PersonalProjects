@@ -1,7 +1,7 @@
 # Databricks - Cómo transformar un archivo parquet con Python-SQL y cargarlo como una tabla en Power BI? 
 
 
-En este primer post de Databricks y con un ejemplo sencillo, nos meteremos a escribir código de Python y SQL en un notebook dónde se realizarán las transformaciones necesarias para limpiar un archivo de tipo parquet y dejar lista las tablas para consumirlas en Power BI.
+En este primer post de Databricks y con un ejemplo sencillo, nos meteremos a escribir código de Python y SQL en un notebook dónde se realizarán las transformaciones necesarias para limpiar un archivo de tipo parquet y dejar lista la tabla para consumirlas en Power BI.
 
 Consideraciones:<br />
 -Se omite el proceso de montaje del datalake. <br />
@@ -78,7 +78,7 @@ display(df)
 
 Ya tenemos data!! El tema ahora es... ¿Cómo transformamos la información que viene desde la columna source?
 
-**Ok, vamos a otra línea de comando y empezamos ejecutar SQL queries:**
+**Ok, vamos a otra línea de comando y empezamos a ejecutar SQL queries:**
 
 La siguiente query, creará una tabla llamada "tablapost" que usara la información que hay dentro del archivo parquet y que vimos en el paso anterior:
 
