@@ -16,11 +16,11 @@ Consideraciones:<br />
 
 Ok, tenemos entonces la tabla "Stock_Pastillas", la cuál tiene tres colores diferentes. Queremos saber por medio de DAX cuál es el color más repetido.
 
-![Foto modelo](captura3.PNG)
+![Foto modelo](captura3.png)
 
 Podemos ver que la tabla tiene tres campos, fecha, el color y el valor del stock de pastillas de cada color.
 
-![Foto modelo](captura4.PNG)
+![Foto modelo](captura4.png)
 Colocamos todos los campos en una tabla para tener más claro el contexto de la data.
 
 
@@ -33,7 +33,7 @@ CountRows_Stock = COUNTROWS(Stock_Pastillas)
 
 ~~~
 
-![Foto modelo](captura5.PNG)
+![Foto modelo](captura5.png)
 
 Ahora crearemos una nueva medida llamada "TopColor_Pastillas" que tendrá el siguiente código:
 
@@ -57,14 +57,14 @@ FIRSTNONBLANK (
 
 
 
-![Foto modelo](captura6.PNG)
+![Foto modelo](captura6.png)
 
 Cómo se entiende esto?
 FIRSTNONBLANK() del primer renglón, hace referencia a que se haga un cálculo teniendo en cuenta que no hay valores blancos, seguido de eso aparece el TOPN() llamando al valor top del campo "color" para que traiga el valor que más veces se repite, finalmente se hace un RANKX() ignorando el contexto de filtro de la tabla con un ALL() y "rankeando" por la medida creada en el paso anterior.
 
 Esto termina dando por resultado el color más repetido (Verde) y que lo colocamos en una Card.
 
-![Foto modelo](captura7.PNG)
+![Foto modelo](captura7.png)
 
 
 ----------------------------
@@ -73,7 +73,7 @@ Esto termina dando por resultado el color más repetido (Verde) y que lo colocam
 
 Veamos.. Si necesitamos el último valor. Necesitamos una "Marca" que es la columna que contiene los valores para averiguar cuál es el último. Para esto suele utilizarse un ranking.
 
-![Foto modelo](captura8.PNG)
+![Foto modelo](captura8.png)
 
 Creamos así una columna calculada llamada "rankx" que tendrá el siguiente código:
 
@@ -81,7 +81,7 @@ Creamos así una columna calculada llamada "rankx" que tendrá el siguiente cód
 rankx = RANKX(All(Stock_Pastillas),Stock_Pastillas[Fecha],,ASC)
 ~~~
 
-![Foto modelo](captura9.PNG)
+![Foto modelo](captura9.png)
 
 Lo siguiente es crear nuestra medida de último valor a la cual nombraremos "UltimoValor_Pastillas" y escribimos el siguiente código:
 
@@ -112,11 +112,11 @@ Cómo se explica este código? Sencillo!
 * El segundo bloque de código es una variable que toma esa "marca" del último día del rank y además que el valor no sea blanco.
 * El último bloque retorna el último valor del stock tomando en cuenta el último valor del ranking.
 
-![Foto modelo](captura10.PNG)
+![Foto modelo](captura10.png)
 
 Si arrastramos nuestra última medida creada en una tabla, podemos verificar que en la tabla de la izquierda efectivamente sí se trae el último valor comparando con todos los registros de la tabla derecha.
 
-![Foto modelo](captura11.PNG)
+![Foto modelo](captura11.png)
 
 * Caso 3: Finalmente y no menos importante, siempre se debe destacar la importancia de dominar la función Calculate()
 
@@ -144,7 +144,7 @@ Explicación: Se utiliza calculate y dentro la medida suma stock, se hace un fil
 
 Vemos cómo queda esa medida en una tabla.
 
-![Foto modelo](captura13.PNG)
+![Foto modelo](captura13.png)
 
 
 * Por qué no utilicé una variable para "SumaStock"? Depende el funcionamiento que se requiera del cálculo para cada caso, hay que tener en cuenta que las variables son atómicas y solo viven en el contexto de la medida y para este caso es mejor generalizar cálculos en medidas diferentes.
