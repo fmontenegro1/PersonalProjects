@@ -28,12 +28,12 @@ Utilizaremos la visual de "Power Automate" que se encuentra en el menú de visua
 
 
 Hacemos clic en el mismo para agregarlo al dashboard:
-Veremos que se da un instructivo de como se debe utilizar esta visual.
+Veremos que se da un instructivo de cómo se debe utilizar esta visual.
 
 
 ![Foto modelo](captura4.png)
 
-Lo primero que debe hacerse es, agregar los campos que queremos enviar por correo. usaremos los mismos que están en la tabla del medio.
+Lo primero que debe hacerse es, agregar los campos que queremos enviar por correo. Usaremos los mismos que están en la tabla del medio.
 
 ![Foto modelo](captura5.png)
 
@@ -57,7 +57,7 @@ En el campo "From" buscamos seleccionar el componente dinámico "Power BI data"
 
 ![Foto modelo](captura10.png)
 
-Luego, empezamos a mapear los campos de la tabla que necesitamos enviar por correo
+Luego, empezamos a mapear los campos de la tabla que necesitamos enviar por correo.
 
 ![Foto modelo](captura11.png)
 
@@ -77,11 +77,11 @@ En el campo "From" seleccionamos el output que es el paso que corresponde a la a
 
 ![Foto modelo](captura15.png)
 
-Por último, creamos el cuarto paso 
+Por último, creamos el cuarto paso.
 
 ![Foto modelo](captura16.png)
 
-buscamos la actividad "send an email" y seleccionamos "Send an email (V2)"
+Buscamos la actividad "send an email" y seleccionamos "Send an email (V2)"
 
 ![Foto modelo](captura17.png)
 
@@ -93,7 +93,7 @@ Seleccionamos el output de la tabla HTML:
 
 ![Foto modelo](captura20.png)
 
-Luego de finalizar dichos pasos, hacemos clic en "save" para guardar el flujo 
+Luego de finalizar dichos pasos, hacemos clic en "save" para guardar el flujo. 
 
 ![Foto modelo](captura21.png)
 
@@ -115,7 +115,7 @@ Si hacemos clic en dicho botón creado "Run Flow" veremos que se ejecuta y se en
 
 ![Foto modelo](captura26.png)
 
-Si abrimos nuestro correo, veremos que llegó el correo correctamente:
+Si abrimos nuestro correo, veremos que llegó el correo exitosamente:
 
 ![Foto modelo](captura27.png)
 
