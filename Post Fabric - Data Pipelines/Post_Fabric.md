@@ -12,72 +12,72 @@ Aclaraciones: <br />
 <br />
 Ingresamos al portal de Power BI con nuestras credenciales en https://app.powerbi.com/
 
-![Foto modelo](captura24.PNG)
+![Foto modelo](captura24.png)
 
 Es importante señalar que en el margen inferior izquierdo, debemos seleccionar "Data Factory" para salir de Power BI y dirigirnos a Data Factory.
 
-![Foto modelo](captura25.PNG)
+![Foto modelo](captura25.png)
 
 
 Hecho una vez el paso de plataformas, Crearemos una simple pipeline con la actividad "Copy data"
 
-![Foto modelo](captura29.PNG)
+![Foto modelo](captura29.png)
 
 Le ponemos un nombre a la pipeline y hacemos clic en "Create"
 
-![Foto modelo](captura31.PNG)
+![Foto modelo](captura31.png)
 
 Automáticamente, se generará el siguiente cuadro con opciones, dónde podremos seleccionar la fuente de datos a utilizar. Para este caso utilizamos un sample de COVID alojado en un datalake llamado "COVID-19 Data Lake"
 
-![Foto modelo](captura32.PNG)
+![Foto modelo](captura32.png)
 
 Seleccionamos el sample "Bing COVID-19"
 
-![Foto modelo](captura9.PNG)
+![Foto modelo](captura9.png)
 
 Ahora debemos elegir el destino a dónde se copiará la data del sample. Para este caso utilizaremos Azure Blob Storage.
 
-![Foto modelo](captura10.PNG)
+![Foto modelo](captura10.png)
 
 Si la conexión no existe, es necesario crearla.
 
-![Foto modelo](captura33.PNG)
+![Foto modelo](captura33.png)
 
 Le ponemos un nombre al file y especificamos el file path a dónde se copiará.
 
-![Foto modelo](captura33.PNG)
+![Foto modelo](captura33.png)
 
 Revisamos que la información sea correcta previo a crear la actividad.
 
-![Foto modelo](captura34.PNG)
+![Foto modelo](captura34.png)
 
 Aquí podemos ver nuestra simple actividad tal cual se vería en una pipeline de Data Factory utilizado en el portal de Azure.
 
-![Foto modelo](captura14.PNG)
+![Foto modelo](captura14.png)
 
 Podemos revisar que el origen de la fuente es el mismo que configuramos.
 
-![Foto modelo](captura15.PNG)
+![Foto modelo](captura15.png)
 
 Revisamos que el destino de copia de data sea el correcto.
 
-![Foto modelo](captura35.PNG)
+![Foto modelo](captura35.png)
 
 Guardamos los cambios de igual manera que en Data Factory.
 
-![Foto modelo](captura17.PNG)
+![Foto modelo](captura17.png)
 
 Iniciamos la ejecución del pipeline.
 
-![Foto modelo](captura18.PNG)
+![Foto modelo](captura18.png)
 
 Luego de un momento, podemos ver que la ejecución del pipeline finalizó correctamente.
 
-![Foto modelo](captura21.PNG)
+![Foto modelo](captura21.png)
 
 Revisamos en el blob storage y efectivamente la información se copió correctamente.
 
-![Foto modelo](captura22.PNG)
+![Foto modelo](captura22.png)
 
 Entonces, cuáles son las ventajas y desventajas de utilizar un producto así hasta el momento?
 
@@ -90,7 +90,7 @@ Desventajas:
 * Implementar de golpe Fabric en una compañía no sería algo muy acertado si la compañía tiene una estructurada consolidada en data. Sería provechoso iniciar ese camino de manera gradual.
 * Si bien hay una estructura de niveles de acceso a usuarios en el portal de admin, es necesario definir a qué productos y que tipo de actividades podrá realizar cada usuario (Cómo en Power BI)
 * No se permite interactuar con más de un pipeline abierto en simultaneo. En Data Factory individual si se puede hacer.
-![Foto modelo](captura27.PNG) 
+![Foto modelo](captura27.png) 
 <br /> 
 
 
