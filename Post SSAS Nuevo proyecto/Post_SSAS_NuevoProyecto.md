@@ -40,7 +40,7 @@ Cual es la diferencia?
 * Workspace Server: Se necesita especificar un server de una base datos a la cual se conectará el modelo tabular.
 
 
-Finalizado dicha elección, chequeamos la conexión.
+Una vez que seleccionamos una opción, pasamos a chequear la conexión.
 
 ![Foto modelo](captura13.png)
 
@@ -60,7 +60,7 @@ Elegimos el origen al cual queremos conectarnos (En nuestro caso, una base de da
 
 ![Foto modelo](captura17.png)
 
-Buscamos nuestra tabla test
+Buscamos nuestra tabla test.
 
 ![Foto modelo](captura18.png)
 
@@ -76,7 +76,7 @@ Vemos nuestra tabla de la base de datos cargada correctamente en el modelo tabul
 
 ![Foto modelo](captura21.png)
 
-# Cómo hago para conectar un modelo tabular a Power BI?** 
+# Cómo hago para conectar un modelo tabular a Power BI?
 
 Muy sencillo! Primero Debemos hacer un deploy del modelo tabular.
 Para eso nos ubicamos en nuestro proyecto en la pestaña "Solution Explorer"
@@ -84,7 +84,7 @@ Para eso nos ubicamos en nuestro proyecto en la pestaña "Solution Explorer"
 ![Foto modelo](captura22.png)
 
 Clic botón derecho en el proyecto y seleccionamos la opción "Deploy"<br />
-Una vez finalizado el deploy, podremos dirigirnos a Power Bi Dekstop para conectarnos a nuestro modelo tabular.
+Una vez finalizado el deploy, podremos dirigirnos a Power BI Dekstop para conectarnos a nuestro modelo tabular.
 
 ![Foto modelo](captura23.png)
 
