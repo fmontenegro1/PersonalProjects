@@ -12,28 +12,28 @@ Consideraciones:<br />
 
 Abrimos Visual Studio (preferentemente en sus últimas versiones)
 
-![Foto modelo](captura2.PNG)
+![Foto modelo](captura2.png)
 
 
 Creamos un nuevo proyecto.
 
-![Foto modelo](captura3.PNG)
+![Foto modelo](captura3.png)
 
 Buscamos la extensión de proyecto "Analysis Services Tabular Project" y la seleccionamos.
 
-![Foto modelo](captura9.PNG)
+![Foto modelo](captura9.png)
 
 Luego, nombramos a nuestro proyecto y seleccionamos la dirección en dónde se creara una carpeta con el proyecto.
 
-![Foto modelo](captura10.PNG)
+![Foto modelo](captura10.png)
 
 Hacemos clic en "Create"
 
-![Foto modelo](captura11.PNG)
+![Foto modelo](captura11.png)
 
 Se abrirá una pequeña ventana dónde debemos especificar si queremos seleccionar un "Integrated Workspace" o un "Workspace server" (En nuestro caso seleccionamos "Workspace Server")
 
-![Foto modelo](captura12.PNG)
+![Foto modelo](captura12.png)
 
 Cual es la diferencia? 
 * Integrated Workspace: se crea una base de datos de trabajo en memoria utilizando la propia instancia implícita de Visual Studio. El integrated Workspace reduce significativamente la complejidad de la creación de proyectos tabulares porque no se requiere un servidor explícito independiente.
@@ -42,67 +42,67 @@ Cual es la diferencia?
 
 Finalizado dicha elección, chequeamos la conexión.
 
-![Foto modelo](captura13.PNG)
+![Foto modelo](captura13.png)
 
 Verificamos que existe conexión al server especificado.
 
-![Foto modelo](captura14.PNG)
+![Foto modelo](captura14.png)
 
 Lo siguiente que veremos es la interfaz con nuestro modelo tabular que aún no tiene ningún origen de datos. Entonces, agregaremos una tabla de prueba.
 
-![Foto modelo](captura15.PNG)
+![Foto modelo](captura15.png)
 
 Se hace clic botón derecho en "Data Source" Y elegimos la opción "Import From Data Source"
 
-![Foto modelo](captura16.PNG)
+![Foto modelo](captura16.png)
 
 Elegimos el origen al cual queremos conectarnos (En nuestro caso, una base de datos SQL)
 
-![Foto modelo](captura17.PNG)
+![Foto modelo](captura17.png)
 
 Buscamos nuestra tabla test
 
-![Foto modelo](captura18.PNG)
+![Foto modelo](captura18.png)
 
 Luego seleccionamos la opción "Load" para cargar esta tabla en el modelo tabular (Si elegimos transform data, se abrirá una interfaz con Power Query para transformar dicha tabla)
 
-![Foto modelo](captura19.PNG)
+![Foto modelo](captura19.png)
 
 Verificamos que los datos de la tabla se cargaron correctamente.
 
-![Foto modelo](captura20.PNG)
+![Foto modelo](captura20.png)
 
 Vemos nuestra tabla de la base de datos cargada correctamente en el modelo tabular.
 
-![Foto modelo](captura21.PNG)
+![Foto modelo](captura21.png)
 
 # Cómo hago para conectar un modelo tabular a Power BI?** 
 
 Muy sencillo! Primero Debemos hacer un deploy del modelo tabular.
 Para eso nos ubicamos en nuestro proyecto en la pestaña "Solution Explorer"
 
-![Foto modelo](captura22.PNG)
+![Foto modelo](captura22.png)
 
 Clic botón derecho en el proyecto y seleccionamos la opción "Deploy"<br />
 Una vez finalizado el deploy, podremos dirigirnos a Power Bi Dekstop para conectarnos a nuestro modelo tabular.
 
-![Foto modelo](captura23.PNG)
+![Foto modelo](captura23.png)
 
 Abrimos Power BI Desktop.
 
-![Foto modelo](captura24.PNG)
+![Foto modelo](captura24.png)
 
 Buscamos y seleccionamos la opción "SQL Server Analysis Services Database"
 
-![Foto modelo](captura25.PNG)
+![Foto modelo](captura25.png)
 
 Especificamos el server y buscamos nuestro proyecto, una vez seleccionado hacemos clic en "Ok"
 
-![Foto modelo](captura26.PNG)
+![Foto modelo](captura26.png)
 
 Listo! Ya creamos nuestro modelo tabular y lo conectamos en Power BI, lo que sigue depende en los requerimientos para continuar desarrollando el proyecto.
 
-![Foto modelo](captura27.PNG)
+![Foto modelo](captura27.png)
 
 # Por qué crear un proyecto en SSAS y no directamente en Power BI?
 El desarrollo de soluciones de análisis y modelos de datos en SQL Server Analysis Services (SSAS) en lugar de hacerlo directamente en Power BI puede tener razones como:
