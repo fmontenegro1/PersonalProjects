@@ -9,6 +9,15 @@ Consideraciones:<br />
 
 -Comenzamos: <br />
 
+# Qué es SSAS?
+
+SSAS es una herramienta de Microsoft que forma parte de la suite de productos de SQL Server y se utiliza principalmente para realizar análisis y procesamiento de datos multidimensionales y tabulares.
+
+* SSAS Multidimensional : En este modo, SSAS permite crear modelos multidimensionales, también conocidos como cubos OLAP (Procesamiento Analítico en Línea). Estos cubos permiten analizar grandes cantidades de datos de manera eficiente y realizar análisis complejos utilizando dimensiones y medidas.<br />
+
+* SSAS Tabular: se utiliza para crear modelos tabulares. Los modelos tabulares son similares a las bases de datos relacionales y permiten la creación de estructuras de datos tabulares en memoria para un acceso rápido y consultas eficientes. Nos centraremos en SSAS Tabular.
+
+
 
 Abrimos Visual Studio (preferentemente en sus últimas versiones)
 
