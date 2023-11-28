@@ -80,7 +80,7 @@ Si buscamos la tabla creada [dbo].[FactInternetSales_Copy] y le hacemos un Selec
 
 Cual es el paso siguiente? *Crear un Stored Procedure que realice la copia de los datos de la tabla original a la tabla de copia.*
 
-**Qué es un Store procedure? Para que Sirve? Cómo podemos utilizarlo para este ejemplo?**
+**Qué es un Stored Procedure? Para qué Sirve? Cómo podemos utilizarlo para este ejemplo?**
 
 Un stored procedure, o procedimiento almacenado en español, es un conjunto de instrucciones SQL precompiladas que se almacenan en una base de datos. Son utilizados comúnmente en sistemas de gestión de bases de datos (DBMS) para encapsular lógica de negocio o tareas repetitivas. Ejemplo: Copiar datos de una tabla a otra, Crear nuevas tablas, Eliminar datos innecesarios, crear particiones, etc.
 
