@@ -3,6 +3,13 @@
 
 En este nuevo post se abordan conceptos de Stored Procedures, Qué son? Para qué sirven? Cómo puedo copiar la data de una tabla a otra? Cómo importar los resultados en Power BI? Lo veremos con sencillos ejemplos.
 
+Beneficios del manejo de Storod Procedures:
+- Manejo de Históricos.
+- Mover grandes volúmenes de datos de tablas temporales a tablas reales.
+- Gestionar el almacenamiento de nuestra DB garantizando performance. 
+- Reutilización de código y garantía de seguridad.
+- Fácil mantenimiento.
+
 Consideraciones:<br />
 -Contamos con SQL Server Management Studio.<br />
 -Contamos con la BD AdventureWorksDW2019 instalada.<br />
