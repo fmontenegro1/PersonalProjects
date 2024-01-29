@@ -1,7 +1,7 @@
 # Fabric - Trabajando con Notebooks en PySpark
 
 
-En este post estaremos explorando algunas de las características del Lakehouse de Fabric, crearemos un pipeline de data factory para automatizar el copiado de un archivo CSV y trabajaremos ese archivo en un notebook con PySpark. Utilizaremos un sample con un ejercicio sencillo.
+En este post estaremos explorando algunas de las características del Lakehouse de Fabric, crearemos un pipeline de Data Factory para automatizar el copiado de un archivo CSV y trabajaremos ese archivo en un notebook con PySpark. Utilizaremos un sample con un ejercicio sencillo.
 
 
 Consideraciones:<br />
