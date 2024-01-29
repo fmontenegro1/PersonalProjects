@@ -169,7 +169,7 @@ Finalmente, guardamos nuestro archivo en formato Parquet.
 
 ![Foto modelo](captura12.png)
 
-Ahora, si volvemos a nuestro Lakehouse, podemos verificar que nuestro archivo (inicialmente un CSV) fue transformado en un Parquet. Este proceso se puede hacer de manera automatica utilizando una actividad de Notebook en una pipeline. 
+Ahora, si volvemos a nuestro Lakehouse, podemos verificar que nuestro archivo (inicialmente un CSV) fue transformado en un Parquet. Este proceso se puede hacer de manera automática utilizando una actividad de Notebook en una pipeline. 
 
 ![Foto modelo](captura13.png)
 
