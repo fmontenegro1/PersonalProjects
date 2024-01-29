@@ -81,7 +81,7 @@ Cómo obtener el Lakehouse path? Sencillo! Se debe hacer clic derecho sobre la c
 
 ![Foto modelo](captura23.png)
 
-Pasamos a una siguiente linea de comando donde seguimos configurando nuestras variables iniciales, definimos rutas de archivos , extraemos la tabla e imprimimos sus resultados
+Pasamos a una siguiente línea de comandos dónde seguimos configurando nuestras variables iniciales, definimos rutas de archivos , extraemos la tabla e imprimimos sus resultados
 
 
 ~~~
