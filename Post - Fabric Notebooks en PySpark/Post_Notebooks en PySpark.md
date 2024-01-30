@@ -35,9 +35,7 @@ Nos ubicamos sobre el Lakehouse de prueba en cuestión y veremos dos carpetas un
 En este caso utilizaremos Data factory para ingestar un Sample en la carpeta Files pero de manera automatizada.
 
 
-![Foto modelo](captura17.png)
-
-Switcheamos de ambiente de trabajo a Data factory, creamos una pipeline con la actividad "Copy data" dónde especificaremos la fuente de dónde se copiará el file.
+* Switcheamos de ambiente de trabajo a Data factory, creamos una pipeline con la actividad "Copy data" dónde especificaremos la fuente de dónde se copiará el file.
 
 
 ![Foto modelo](captura18.png)
@@ -53,11 +51,11 @@ En destination, elegimos nuestro Lakehouse de prueba y configuramos el file path
 
 ![Foto modelo](captura16.png)
 
-Aqui vemos la carpeta y dentro su file. La cuestión es.... Cómo podemos transformar este archivo? La respuesta es: **Con un notebook.**
+Aqui vemos la carpeta y dentro su file. La cuestión es.... Cómo podemos transformar este archivo? La respuesta es: **Con un notebook usando PySpark.**
 
 ![Foto modelo](captura21.png)
 
-Entonces, abrimos un nuevo notebook y comenzamos a configurar nuestras variables para tomar nuestro archivo CSV.
+Entonces, abrimos un nuevo notebook y comenzamos a configurar nuestras variables para tomar nuestro archivo CSV. Verificamos en Language que este seleccionado PySpark
 
 ![Foto modelo](captura22.png)
 
