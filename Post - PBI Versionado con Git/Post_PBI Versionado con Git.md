@@ -89,7 +89,7 @@ Allí podremos ver los commits realizados en el proyectos y podemos ver el últi
 Lo que debemos hacer ahora es crear un pull request para agregar esta rama de desarrollo propia (branch) a la rama principal (main)
 
 <b>Qué es un pull request?</b>
-Es un petición de cambios en un repositorio de código, un desarrollador crea un pull request que solicita a load admin que revisen y consideren la incoporación de nuevos cambios a la rama principal
+Es un petición de cambios en un repositorio de código, un desarrollador crea un pull request que solicita al reviewer que revisen y consideren la incoporación de nuevos cambios a la rama principal.
 
 ![Foto modelo](captura15.png)
 
@@ -97,7 +97,7 @@ Al crear el pull request, verificamos que nuestra branch se unirá a la rama pri
 
 ![Foto modelo](captura16.png)
 
-Finalmente, creamos el pull request esperando que el admin lo apruebe.
+Finalmente, creamos el pull request esperando que el reviewer lo apruebe.
 
 ![Foto modelo](captura17.png)
 
@@ -116,7 +116,7 @@ Podemos verificar que ahora sí, nuestro reporte e item de Fabric está correcta
 </br>
 
 Cómo una pequeña síntesis, me gustaría agregar mis observaciones respecto de esta nueva posibilidad de trabajo en equipos interdisciplinarios (De´s,BI´s,Ds´s,etc..)
-Está claro que, ya el versionado de código no es solo para los programadores puros WinDesk o Webs, y hoy, Fabric permite esta posibilidad de trabajar de manera distribuida y sincronizada usando las últimas tecnologías disponibles (en este caso agregamos versionado de código)
+Está claro que, el versionado de código ya no es sólo para los programadores puros WinDesk o Webs, y hoy, Fabric permite esta posibilidad de trabajar de manera distribuida y sincronizada usando las últimas tecnologías disponibles (en este caso agregamos versionado de código)
 Queda en los usuarios y las compañías poder adaptarse a estos nuevos cambios e implementar reglas y técnicas para poder realizar desarrollos de una manera más eficiente y profesional.
 
 </br>
