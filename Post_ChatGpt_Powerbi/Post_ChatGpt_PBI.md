@@ -56,6 +56,8 @@ Abrimos VB Code y utilizaremos un archivo ipynb para poder trabajar con datafram
 
 A continuación dejo el código que utilizamos con sus instrucciones y partes en las que deben completar con sus respectivos paths:
 
+* Cabe destacar que no nos enfocaremos en normalizar el json, sino, en extraer sólo los elementos que nos interesan, que son la fecha, título y parts.
+
 <pre><code>
 
 import pandas as pd
