@@ -1,0 +1,80 @@
+import json
+import pandas as pd
+import pyodbc
+from datetime import datetime
+
+# Ruta al archivo JSON
+json_path = 'C:\\Users\\Fmontenegro\\Documents\\GitHub\\PersonalProjects\\ChatGpt_Powerbi\\conversations.json'  # Cambia esto por la ruta correcta
+
+# Cargar el JSON
+with open(json_path, 'r', encoding='utf-8') as file:
+    data = json.load(file)
+
+# Normalizar el JSON para convertirlo en un DataFrame
+if isinstance(data, dict):
+    if 'data' in data:
+        df = pd.json_normalize(data['data'])  # Normalizar estructuras anidadas
+    else:
+        df = pd.json_normalize(data)
+elif isinstance(data, list):
+    df = pd.json_normalize(data)
+else:
+    raise ValueError("El archivo JSON no tiene un formato compatible (debe ser lista o diccionario).")
+
+# Crear un nuevo DataFrame con las columnas Fecha, Pregunta y Respuesta
+# Verificar si las claves `created_at`, `title` y `response` están presentes antes de asignar
+if 'created_at' in df.columns:
+    df['Fecha'] = pd.to_datetime(df['created_at'], errors='coerce')
+else:
+    df['Fecha'] = None  # Si no está presente, dejar la columna como None o puede ajustar según las necesidades
+
+df['Pregunta'] = df['title'] if 'title' in df.columns else None  # Asigna `title` como `Pregunta`
+
+# Manejar el caso donde `response` no está presente
+# Si `response` no está presente o tiene valores `None`, cambia a una cadena vacía
+df['respuesta'] = df.get('response', '')  # No es necesario usar fillna aquí si ya se asume que response puede ser un str vacío o None
+
+# Configuración de conexión a SQL Server
+server = 'mvpdemos.database.windows.net'
+database = 'database_prueba'
+username = 'admin1'
+password = 'Fmontenegro1'
+
+# Crear la conexión
+conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};'
+                      f'SERVER={server};'
+                      f'DATABASE={database};'
+                      f'UID={username};'
+                      f'PWD={password}')
+
+# Crear un cursor
+cursor = conn.cursor()
+
+# Nombre de la tabla donde se guardarán los datos
+table_name = 'dbo.HistorialChatGPT'  # Cambia esto por el nombre correcto de tu tabla
+
+# Crear la tabla automáticamente si no existe
+columns = ['Fecha', 'Pregunta', 'respuesta']
+sql_create_table = f"CREATE TABLE {table_name} ([Fecha] DATETIME NOT NULL, [Pregunta] NVARCHAR(MAX), [respuesta] NVARCHAR(MAX))"
+try:
+    cursor.execute(f"IF OBJECT_ID('{table_name}', 'U') IS NULL BEGIN {sql_create_table} END")
+    conn.commit()
+    print(f"Tabla '{table_name}' creada o ya existente.")
+except Exception as e:
+    print(f"Error al crear la tabla: {e}")
+
+# Inserta los datos en la tabla
+for index, row in df.iterrows():
+    # Verificar si el valor de Fecha no es None antes de insertar
+    fecha_valor = row['Fecha'] if row['Fecha'] is not None else datetime.now()  # Utiliza la fecha actual si Fecha es None
+    respuesta_valor = row['respuesta'] if row['respuesta'] is not None else ''  # Usa '' si respuesta es None
+    cursor.execute(f"INSERT INTO {table_name} ([Fecha], [Pregunta], [respuesta]) VALUES (?, ?, ?)",
+                   fecha_valor, row['Pregunta'], respuesta_valor)
+
+# Asegurarse de hacer un commit para guardar los cambios
+conn.commit()
+
+# Cerrar la conexión
+conn.close()
+
+print("Datos guardados exitosamente en SQL Server.")
